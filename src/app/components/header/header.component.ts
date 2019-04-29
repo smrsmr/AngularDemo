@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
 		id: 1,
 		name: '组件'
 	}
-	p:string = '<h2>我是一个H2</h2>'
   constructor() { }
 
 	ngOnInit() {
