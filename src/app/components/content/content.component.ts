@@ -25,6 +25,9 @@ export class ContentComponent implements OnInit {
 			}
 		]
 	}
+	setH2() {
+		this.h2 = '<h2>我是修改之后的</h2>'
+	}
 
   ngOnInit() {
   }
