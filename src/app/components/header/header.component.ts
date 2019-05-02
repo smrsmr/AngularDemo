@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Header} from './components/header'
 @Component({
   selector: 'app-header',
@@ -6,6 +6,12 @@ import {Header} from './components/header'
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
+	private _msg = '';
+	@Input() 
+	set msg(msg: string) {
+		this._msg = msg+'我是修改之后的'
+		}
+	@Input() propsFun: any;
 	title: String
 	header: Header = {
 		id: 1,
