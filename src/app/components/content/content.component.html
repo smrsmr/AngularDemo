@@ -8,5 +8,7 @@
 	<button (click)="setH2()">点击修改H2</button>
 	<p *ngIf="flasg">看我是否显示</p>
 	<button (click)="flasg = !flasg">点击我</button>
-	<app-header [msg]="msg" [propsFun]="propsFun"></app-header>
+	<button (click)="header.run()">点击获取子组件的方法</button>
+	<button (click)="getSonData()">点击获取和修改子组件的数据</button>
+	<app-header [msg]="msg" [propsFun]="propsFun" #header></app-header>
 </div>

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+/**
+ * ViewChild 父组件获取子组件的数据所引入的
+ */
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.less']
 })
 export class ContentComponent implements OnInit {
+	@ViewChild('header') header: any;
 	h2: string
 	list: Array<object>
 	flasg: boolean
@@ -34,6 +38,11 @@ export class ContentComponent implements OnInit {
 	}
 	propsFun() {
 		console.log('我是父组件的方法');
+	}
+	getSonData() {
+		//this.header.run();
+		console.log(this.header.sonData);
+		this.header.sonData = '我是父组件修改子组件之后的数据'
 	}
   ngOnInit() {
   }
